@@ -191,6 +191,11 @@ versioning:
 | `feat!: change the preload ABI` | Major release |
 | `docs: clarify cpuset behavior` | No release by default |
 
+Release notes include feature, fix, performance, revert, and maintenance
+commits. Renovate uses `chore(deps)`, so dependency updates appear in the
+Maintenance section when a release is already being created by a releasable
+change. Maintenance commits alone do not create a version bump.
+
 The workflows assume `main` is the default branch. For repositories that use a
 different default branch, change both workflow triggers. The repository setting
 that allows GitHub Actions to create pull requests must also be enabled.
