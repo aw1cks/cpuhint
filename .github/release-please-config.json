@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+  "packages": {
+    ".": {
+      "release-type": "simple",
+      "package-name": "cpuhint",
+      "initial-version": "0.1.0",
+      "version-file": "VERSION",
+      "include-component-in-tag": false,
+      "include-v-in-tag": true,
+      "extra-files": [
+        "VERSION"
+      ]
+    }
+  }
+}

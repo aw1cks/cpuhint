@@ -1,0 +1,9 @@
+[package]
+name = "cpuhint-diagnose"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+cpuhint-core = { package = "cpuhint-core", path = "../cpuhint-core" }
+cpuhint-linux = { package = "cpuhint-linux", path = "../cpuhint-linux" }

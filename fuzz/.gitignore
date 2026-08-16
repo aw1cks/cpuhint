@@ -1,0 +1,7 @@
+/artifacts/
+/corpus/build_contiguous_mask/
+/corpus/parse_cpu_list/*
+!/corpus/parse_cpu_list/contiguous
+!/corpus/parse_cpu_list/disjoint
+!/corpus/parse_cpu_list/single
+/target/

@@ -1,0 +1,29 @@
+[package]
+name = "cpuhint-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2024"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+cpuhint-core = { package = "cpuhint-core", path = "../crates/cpuhint-core" }
+libfuzzer-sys = "0.4"
+
+[[bin]]
+name = "parse_cpu_list"
+path = "fuzz_targets/parse_cpu_list.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "build_contiguous_mask"
+path = "fuzz_targets/build_contiguous_mask.rs"
+test = false
+doc = false
+bench = false
+
+[workspace]
+members = ["."]

@@ -1,0 +1,18 @@
+[workspace]
+members = [
+    "crates/cpuhint-core",
+    "crates/cpuhint-diagnose",
+    "crates/cpuhint-linux",
+    "crates/cpuhint-preload",
+]
+resolver = "2"
+
+[workspace.package]
+edition = "2024"
+rust-version = "1.85"
+
+[profile.release]
+panic = "abort"
+
+[profile.dev]
+panic = "abort"

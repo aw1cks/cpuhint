@@ -1,0 +1,27 @@
+name: Fuzz
+
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fuzz:
+    name: Fuzz core invariants
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: dtolnay/rust-toolchain@nightly
+        with:
+          components: rustfmt
+      - name: Install cargo-fuzz
+        run: cargo install cargo-fuzz --locked
+      - name: Check fuzz target formatting
+        run: cargo fmt --manifest-path fuzz/Cargo.toml -- --check
+      - name: Fuzz CPU-list parser
+        run: cargo fuzz run parse_cpu_list -- -max_total_time=60 -max_len=4096
+      - name: Fuzz mask construction
+        run: cargo fuzz run build_contiguous_mask -- -max_total_time=60 -max_len=64
