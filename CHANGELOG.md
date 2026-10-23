@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.1](https://github.com/aw1cks/cpuhint/compare/v0.1.0...v0.1.1) (2026-10-23)
+
+
+### Maintenance
+
+* **deps:** update dtolnay/rust-toolchain digest ([0f8fa7d](https://github.com/aw1cks/cpuhint/commit/0f8fa7d347d70ed8b1d9dfa6a112d410c8053f00))
+* **deps:** update rust crate libc to v0.2.191 ([8923967](https://github.com/aw1cks/cpuhint/commit/89239677924f5258d02f8c244375aa3d1b722a35))
+* **deps:** update rust crate rustix to v1.1.5 ([ed3ad3a](https://github.com/aw1cks/cpuhint/commit/ed3ad3ab8e7ce8a618517b8b46f1ac382d0854db))
+
 ## 0.1.0 (2026-08-16)
 
 
